@@ -1,0 +1,25 @@
+-----------------------------------------------------
+One Community ADA (1COMM)
+Pool Ticker: 1COMM
+Pool ID: 75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da
+------------------------------------------------------
+Web: https://www.onecommunityada.com
+Twitter: https://twitter.com/OneCommunityAda
+Ada Pools: https://adapools.org/1COMM
+------------------------------------------------------
+- Follow @OneCommunityAda on Twitter for Cardano & Crypto News and Updates!
+- Delegate to 1COMM and support decentralization with a solo pool!
+- 80 minted blocks, 173 delegators, 1.75 MM Live Stake! (Up to Epoch 294)
+- ZERO margin fee! (At least until end of Jun/22. Later 1%.)
+- Relays in NA and Europe for redundancy and best sync globally.
+- 402k pledge, committed to support the pool and network.
+- Pioneer SPO, initiated operations in ITN phase (Early 2020).
+------------------------------------------------------
+Badges:
++100 delegators achieved!
++1MM stake achieved!
++10 blocks achieved!
++Cardano Summit 2021 | Veritree Impact Challenge - 500 trees planted
+
+More info on www.onecommunityada.com
+------------------------------------------------------

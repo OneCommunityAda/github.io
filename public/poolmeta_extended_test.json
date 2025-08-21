@@ -1,0 +1,12 @@
+{
+"itn": {
+  "owner": "ed25519_pk1sm9ppvg4pjlx59me7gzltg4lppz0rsk9hjgq5je7hmmpu5nfdcps2q4yjj",
+  "witness": ed25519_sig12anpa6je2763gglv96c2a3k2yd0u0fdrw6znf3jjg4fcke8t6lujks2gyqp6usmjf2ps5h5hlu66dapr8s9qdpdd5zn94c69h56e5zshjllxl"
+},
+ "info": {
+        "url_png_icon_64x64": "https://onecommunityada.com/imgs/1COMM Logo - 64px.png",
+        "url_png_logo": "https://onecommunityada.com/imgs/1COMM Logo Text.png",
+        "social": {
+            "twitter_handle": "OneCommunityAda"
+        }
+}

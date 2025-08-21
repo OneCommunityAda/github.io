@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="keywords" content="Crypto, Cryptocurrency, Cryptocurrencies, Cardano, ADA, Community, Staking, Stake, StakePool, Pool, Delegate">
+        <title>One Community ADA</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+Matomo 4.3.1 - free/libre analytics platform
+free/libre analytics platform
+
+English 
+INSTALLATION STATUS100%
+1. Welcome!
+2. System Check
+3. Database Setup
+4. Creating the Tables
+5. Super User
+6. Setup a Website
+7. JavaScript Tracking Code
+8. Congratulations
+Congratulations
+Congratulations! Your Matomo installation is complete.
+
+Make sure your JavaScript code is entered on your pages, and wait for your first visitors!
+
+Welcome to the Matomo community!
+Matomo is a collaborative project, built with love by people from all over the world.
+
+If you like what you see, you can get involved. Maybe you would like to help us improve the Matomo translations?
+
+We hope you will enjoy using Matomo as much as we enjoy making it.
+
+Happy analysing!
+
+Advanced Analytics & Services
+Our network of experts can help your organization unlock the full power of Matomo analytics.
+
+Learn about additional products and services for Matomo and how to increase your conversions and revenue.
+
+Performance Settings
+One final note regarding performance: your Matomo is setup and ready to track and report on your website's traffic, but if you find Matomo slow, you will want to take the extra step of setting up CLI archiving. This will generate your reports in the background periodically, rather than on demand.
+
+This requires adding a Matomo command to cron which can't be done automatically by the installer, but you can read our FAQ to learn how you can set it up yourself.
+
+Default Matomo settings
+Matomo comes with default settings. You can customize them now or do so later in the admin screen.
+
+For a proper geolocation Matomo requires an external database. Using this option, Matomo will automatically be configured to download and use the latest dbip city level database. [View licensing terms]
+When users have set their web browser to "I do not want to be tracked" (DoNotTrack is enabled) then Matomo will not track these visits.
+When users visit your website, Matomo will not use the full IP address (such as 213.34.51.91) but instead Matomo will anonymize it first (to 213.34.0.0). IP address anonymisation is one of the requirements set by the privacy laws in some countries such as Germany.
+
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="imgs/1COMM_Logo_Blue_100px.png" width=60" height="60">  1COMM</a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Why_Delegate">Why Delegate</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Why_1COMM">Why 1COMM</a></li>
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#About">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio"> Cardano</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://onecommunityada.com/concepts">Learn</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://onecommunityada.com/faq">FAQ</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://onecommunityada.com/delegate">Delegate</a></li>
+                    </ul>
+                </div>
+			</div>
+        </nav>
+		
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <!--<div class="container d-flex align-items-center flex-column">-->
+                <h1 class="masthead-heading text-uppercase mb-0">One Community ADA  <img src="imgs/1COMM_Logo.png" width=100" height="100"></h1>	
+
+		<!-- Icon Divider-->
+                <!-- Masthead Subheading-->
+				<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Follow <a href="https://www.twitter.com/OneCommunityAda"><font color="Blue">@OneCommunityAda</font></a> on Twitter for Cardano and Crypto News & Community Updates!</p>
+				<p></p>
+
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$.getJSON('https://js.adapools.org/pools/75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da/summary.json', function(data) { 
+$.each( data.data, function( i, val ) { 
+		a=new Array('tax_fix','pledge','total_stake');
+		if(a.includes(i))  val=Math.round(parseInt(val)/1000000);
+		if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+
+		$('#75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_'+i).html(val).text();   
+}); 
+		});
+</script>
+
+<style>
+table.style-poolcard {
+  border-collapse: collapse;
+  width: 370px;
+  background-color: #212F3D;
+  color: #FDFEFE;
+  text-align: left;
+  padding: 8px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+table.style-whitebg {
+  border-collapse: collapse;
+  color: #212F3D;
+  text-align: left;
+  padding: 4px;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 100%
+}
+table.style-greenbg {
+  border-collapse: collapse;
+  color: #FDFEFE;
+  text-align: left;
+  padding: 4px;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 100%
+}
+td.poolcard, th.poolcard {
+  text-align: left;
+  padding: 4px;
+  font-size: 1.0rem;
+}
+tr.poolcard {
+  padding: 2px;
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+  font-size: 1.25rem;
+}
+</style>
+
+<table class="style-poolcard">
+<!--style="background-color: #212F3D; width: 370px; margin-left: auto; margin-right: auto;" -->
+     <tr>
+          <td colspan="4" class="poolcard">
+               <a href="https://adapools.org/pool/75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da"><font color="deepskyblue">[1COMM] One Community ADA</font></a>
+<br><font color="dimgrey" font size = "1">75f7b7dec6<wbr>e4c973407a<wbr>6a64132961<wbr>635f405f2c<wbr>3a9ff31598<wbr>db01da</font>
+          </td>
+     </tr>
+  <tr>
+     <td colspan="2  class="poolcard"><font color="white">ROA<font size="2"> (Return on ADA)</font>:</font><br>
+     <span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_roa_lifetime"></span> %
+     </td>
+     <td colspan="2  class="poolcard" color="white">Delegators:<br>
+      <span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_delegators"></span>
+      </td>
+  </tr>
+<tr class="poolcard">
+	<td class="poolcard">Lifetime Blocks: </td>
+	<td class="poolcard"><span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_blocks_lifetime"></span></td>
+	<td class="poolcard">Live Stake: </td>
+	<td class="poolcard"><span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_total_stake"></span></td>
+</tr>
+  <tr class="poolcard">
+     <td class="poolcard">Pledge:</td>
+     <td  class="poolcard"><span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_pledge"></span>
+     <td class="poolcard">Cost:</td>
+    <td class="poolcard"><span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_tax_ratio"></span>% + <span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_tax_fix"></span></td>
+   </tr>
+  <tr><td colspan="4"  class="poolcard">
+<font color="darkgray" font size = "2"><i><span id="75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da_db_description"></span></i></font>
+   </td></tr>
+</table>
+				<p></p>
+				<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Variable Fee: </font><font color="Blue"><strike>Low 1% Fee!</strike> ZERO at least until end of December 2021 for all existing and new delegators!</font></p>
+				<p></p>
+				<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Ticker: </font><font color="Blue">1COMM</font></p>
+				<p></p>
+				<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id: </font> <font color="blue">75f7b7dec6<wbr>e4c973407<wbr>a6a6413296<wbr>1635f405f2<wbr>c3a9ff3159<wbr>8db01da</font></p>
+				<p></p>
+				<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id (In BECH32): </font> <font color="blue">pool1whmm0<wbr>hkxunyhxsr<wbr>6dfjpx2tpv<wbr>d05qhev820<wbr>lx9vcmvqa5<wbr>wjc6nh</font></p>
+            <!--</div>-->
+        </header>
+
+
+        <!-- Why Deletate-->
+        <section class="page-section" id="Why_Delegate">
+	<div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Why Delegate</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+                <!-- About Why_Delegate Form-->
+                <table class="style-whitebg">
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_01_Cardano.png" style="width:80px; height:80px"></td>
+				<td><b>Support Cardano:</b> As Cardano is a PoS (Proof of Stake) network, by delegating your ADA stake you are contributing to secure the network.</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_02_Passive_Income.png" style="width:80px; height:80px"></td>
+				<td><b>Passive Income:</b> As a reward for supporting the Cardano network, you get passive income from your delegated stake! As long as the pool you delegate to is in working orders and not saturated (doesn’t have more than 64MM ADA), it will render around 5% ROA (return on ADA) anually. (Note: In short terms the ROA is bound to fluctuated.)</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_03_Secure.png" style="width:80px; height:80px"></td>
+				<td><b>Secure:</b> Your delegated stake never leaves your wallet! There are two official wallet softwares: <a href=" https://yoroi-wallet.com/" add target="_blank">Yoroi<a/> (Light weight wallet, for normal users) and <a href="https://daedaluswallet.io/" add target="_blank">Daedalus</a> (Full node wallet, recommended for advanced users).</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_04_Full_Control.png" style="width:80px; height:80px"></td>
+				<td><b>Full control:</b> As your delegated stake never leaves your wallet, you always have full control on your funds, being able to transfer it out of your wallet any time as your delegated stake is not locked.</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_05_Convenience.png" style="width:80px; height:80px"></td>
+				<td><b>Convenience:</b> After you delegate your stake, any funds added to the wallet is automatically also set to stake, and vice versa - funds removed from the wallet are removed from the staking process. Note, however, that an added fund takes at least 15-20 days to receive the first reward, so bear in mind staking is more of a mid term process rather than an instant gratification one. (<a href="https://twitter.com/OneCommunityAda/status/1359700048347594752?s=20" add target="_blank">Check this Twitter post!<a/>)</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_06_Automatic.png" style="width:80px; height:80px"></td>
+				<td><b>Automatic:</b> The staking reward distribution is carried out automatically by the stake pool with no human interference, so there is no human interference that could possibly miscalculate the reward you should get.</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_WhyStake_07_Pct_Staked.png" style="width:80px; height:80px"></td>
+				<td><b>Conclusion:</b> With all points above, it is natural for ADA holders to conclude it is best to stake your ADA. As such, over 70% of all ADA available is staked! (<a href="https://twitter.com/OneCommunityAda/status/1361418866010726402?s=20" add target="_blank">Check this Twitter post!<a/>)</td>
+			</tr>	
+		</table>
+	</div>
+        </section>
+
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$.getJSON('https://js.adapools.org/pools/75f7b7dec6e4c973407a6a64132961635f405f2c3a9ff31598db01da/summary.json', function(data) { 
+$.each( data.data, function( i, val ) { 
+		a=new Array('tax_fix','pledge','total_stake');
+		if(a.includes(i))  val=Math.round(parseInt(val)/1000000);
+		if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+
+		$('#75f7b7dec6e4_'+i).html(val).text();   
+}); 
+		});
+</script>
+
+        <!-- Why 1COMM Section-->
+        <section class="page-section bg-primary text-white mb-0" id="Why_1COMM">
+            <div class="container">
+                <!-- Why 1COMM Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Why delegate to 1COMM</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Why 1COMM Section Content-->
+                <table class="style-greenbg">
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_01_Proven_Track_Record.png" style="width:80px; height:80px"></td>
+				<td><b>Proven track record:</b> With <span id="75f7b7dec6e4_blocks_lifetime"></span> minted blocks, and a lifetime ROA (return on ADA) of <span id="75f7b7dec6e4_roa_lifetime"></span>% (annualized), 1COMM is proven to be running accordingly!				</td>
+			</tr>	
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_02_Low Fee.png" style="width:80px; height:80px"></td>
+				<td><b>Low fees:</b> 1COMM runs with the minimum fixed fees the network allows (340 ADA) and <strike>a low 1% variable fee</strike> is currently running with ZERO variable fee!</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_03_Decentralize.png" style="width:80px; height:80px"></td>
+				<td><b>Decentralize:</b> 1COMM is in the single pool operator category, which means it is a solo pool. As such, delegating to 1COMM helps promoting decentralization.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_04_Plenty_of_room_to_grow.png" style="width:80px; height:80px"></td>
+				<td><b>Plenty of room to grow:</b> With the current network parameter of K=500, pools with more than 64MM ADA are saturated and therefore are penalized with staking revenue cut, to incentivize decentralization. All other operational pools will render around 5% anually.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_05_News_n_Updates.png" style="width:80px; height:80px"></td>
+				<td><b>Provider of Crypto & Cardano News & Updates:</b> Follow <a href="https://twitter.com/OneCommunityAda" add target="_blank"><font color="Blue">@OneCommunityAda</font><a/> and have your one stop shop to keep updated about the market and to keep track of the stake pool you delegated to.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_06_Twitter.png" style="width:80px; height:80px"></td>
+				<td><b>Twitter:</b> <a href="https://twitter.com/OneCommunityAda" add target="_blank"><font color="Blue">@OneCommunityAda</font><a/>  has a growing community on Twitter, currently with +1600 followers!</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_07_Community.png" style="width:80px; height:80px"></td>
+				<td><b>Delegators:</b> 1COMM has a growing community of delegators, currently with <span id="75f7b7dec6e4_delegators"></span> delegators!</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_08_Pledge.png" style="width:80px; height:80px"></td>
+				<td><b>Pledge:</b> 1COMM has 402k pledge, committed to support the pool and the network.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_09_Infrastructure.png" style="width:80px; height:80px"></td>
+				<td><b>Infrastructure:</b> 1COMM runs on high-grade and high-availability servers dedicated exclusively to the stake pool, running on cloud services.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_10_Network.png" style="width:80px; height:80px"></td>
+				<td><b>High Speed:</b> 1COMM is supported by high bandwith connections, with 200Mbps and 400Mbps connections.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_11_DDoS.png" style="width:80px; height:80px"></td>
+				<td><b>DDoS Protected:</b> 1COMM has an enabled DDoS (Distributed Denial-of-Service) service protection in the datacenter level that recognizes 99% of all attack patterns which is then filtered, keeping the server online and available, even if they are under attack.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_12_Compliant.png" style="width:80px; height:80px"></td>
+				<td><b>Compliant:</b> 1COMM is compliant with Cardano's <a href="https://docs.cardano.org/en/latest/getting-started/guidelines-for-operating-large-stake-pools/" add target="_blank"><font color="Blue">guidelines</font><a/> for operating large stake pools.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_13_Global.png" style="width:80px; height:80px"></td>
+				<td><b>Global:</b> 1COMM has relays 2 in regions (North America and Europe) for redundancy and best network synchronization across the globe.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_14_Peace_of_Mind.png" style="width:80px; height:80px"></td>
+				<td><b>Peace of mind:</b> Delegate your stake and leave the rest to us! 1COMM is commited to keep the nodes updated with the latest Cardano release, with active alerts and monitoring in place.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_15_Alliance.png" style="width:80px; height:80px"></td>
+				<td><b>Member of the Alliance Stake Pools:</b> 1COMM is supporter of low-stake Cardano stake pools.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_16_SPOCRA.png" style="width:80px; height:80px"></td>
+				<td><b>Member of SPOCRA:</b> 1COMM is participant of the Stake Pool Operator Collective Representation Assembly.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_17_Pioneer.png" style="width:80px; height:80px"></td>
+				<td><b>Pioneer:</b> 1COMM initiated operations early 2020, in the ITN phase (Incentivized Test Network), also participating in the MC Networks (Mainnet Candidate Networks), and was registered in the mainnet on August 2020, with the launch of Cardano's Shelly Era.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_18_Environmentally_Friendly.png" style="width:80px; height:80px"></td>
+				<td><b>Environmentally friendly:</b> 1COMM runs in datacenters with modern technologies such as Free Cooling / Groundwater Cooling to increase the energy efficiency.</td>
+			</tr>
+			<tr>
+				<td><img src="imgs/Icon_Why1COMM_19_Promotionally_Zero_Margin.png" style="width:80px; height:80px"></td>
+				<td><b>Promotional:</b> 1COMM is promotionally running with 0% variable fee (minimum possible), applicable for all existing and new delegators!</td>
+			</tr>
+		</table>
+        </section>
+
+		
+        <!-- About Section-->
+        <section class="page-section" id="About">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+								
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+					                </div>
+                <!-- About Section Form-->
+				
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+						<div class="row">
+						<div class="col-lg-15 mr-auto"><p class="lead">One Community Ada Stake Pool (1COMM) is running on high-grade and high-availability cloud services with relays in 2 regions (North America and Europe) for redundancy and best network synchronization across the globe. Active monitoring and automated fail-over procedures were implemented for a proficient and resilient management.</p></div>
+						<div class="col-lg-15 mr-auto"><p class="lead">We run with <font color="black">the minimal allowed fixed fees (340 ADA) </font> and <strike>a <font color="black">low 1% variable fee</font> </strike>currently run with <font color="black">ZERO variable fee</font>! To delegate your stake, you may search for us under the ticker <font color="Blue">1COMM</font>, with pool ID <font color="blue">75f7b7dec6<wbr>e4c973407<wbr>a6a6413296<wbr>1635f405f2<wbr>c3a9ff3159<wbr>8db01da</font>.</p></div>	
+
+                <div class="divider-custom">
+								
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+					                </div>
+
+
+						<div class="col-lg-15 ml-auto">
+<p class="lead">One Community ADA (1COMM) is a pioneer ADA stake pool initiated in the ITN phase (Incentivized Test Network), in early 2020, that also participated in the MC Networks (Mainnet Candidate Networks), in preparation for Cardano's Shelly Era launch in July 2020.</p>
+<p class="lead">One Community ADA (1COMM) was registered in Mainnet on August 2020, and joined Cardano's mission, to be a plataform built for a sustainable future, to help people work better together, trust one another, and build global solutions to global problems!</p>
+<p class="lead"><i>"We are Cardano. And if you'll permit us, we'd like to change the world!" -- Charles Hoskinson</i></p></div>
+						<div class="col-lg-15 mr-auto"><p class="lead">As a memorial of the pioneer period, here are the former IDs of One Community ADA in preparation for the Shelly Era:
+							<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id (MC4 - Depricated):</font> <font color="dimgrey">637a115bdb<wbr>701f53a0d3<wbr>6a7cc8d1f7<wbr>936541381b<wbr>57ccd0e261<wbr>f65df1</font></p>
+							<p></p>
+							<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id (MC3 - Depricated):</font> <font color="dimgrey">2f64858683<wbr>0e32769f1f<wbr>9ccc7178d5<wbr>819676b9<wbr>3799bf4161<wbr>88f7e653</font></p>
+							<p></p>
+							<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id (HTN2 - Depricated):</font> <font color="dimgrey">b6e553bafe<wbr>3a7e4dbd1c<wbr>336029fafd<wbr>820be4267b<wbr>a725f46af3<wbr>e67896</font></p>
+							<p></p>
+							<p class="masthead-subheading font-weight-light mb-0"><font color="Black">Pool id (ITN - Depricated):</font> <font color="dimgrey">fc194b8961<wbr>5e70b42cda<wbr>e4571675c8<wbr>380f2196a3<wbr>6542ec9bbc<wbr>72238f1caa<wbr>f4ae</font></p>
+						</p></div>	
+					</div>
+				
+					  
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!-- Portfolio Section-->
+        <section class="page-section portfolio bg-primary text-white mb-0" id="portfolio">
+            <div class="container">
+              <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Cardano</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+					<a href="https://www.cardano.org/" add target="_blank">
+                        <div class="portfolio-item mx-auto"">
+						
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">Cardano Official Website</div>
+                            </div>
+                            <img class="img-fluid" src="imgs/Cardano.jpg" alt="" />
+                        </div>
+					</a>
+                    </div>
+					
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+					<a href="https://explorer.cardano.org/" add target="_blank">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">Cardano Blockexplorer</i></div>
+                            </div>
+                            <img class="img-fluid" src="imgs/Explorer.png" alt="" />
+                        </div>
+					</a>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+					<a href="https://cardano.org/ouroboros/" add target="_blank">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">Ouroboros Protocol</div>
+                            </div>
+                            <img class="img-fluid" src="imgs/Philosophy.png" alt="" />
+                        </div>
+					</a>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+					<a href="https://cardanoroadmap.com/" add target="_blank">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">Cardano Roadmap</div>
+                            </div>
+                             <img class="img-fluid" src="imgs/Roadmap.jpg" alt="" />
+                        </div>
+					</a>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+					<a href="https://roadmap.cardano.org/en/goguen/" add target="_blank">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">The Goguen Era</div>
+                            </div>
+                            <img class="img-fluid" src="imgs/Cardano2.jpg" alt="" />
+                        </div>
+					</a>
+                    </div>
+                    <!-- Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+					<a href="https://twitter.com/OneCommunityAda/status/1355540636439609344?s=20" add target="_blank">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">Why We Are Building Cardano</div>
+                            </div>
+                             <img class="img-fluid" src="imgs/Calculator.jpg" alt="" />
+                        </div>
+					</a>
+                    </div>
+			
+                </div>
+            </div>
+        </section>		
+		
+
+        <!-- Learn Section-->
+        <section class="page-section" id="Learn">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Learn</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+		</div>
+                <!-- About Section Form-->
+                <table class="style-whitebg">
+			<tr>
+				<td><a href="https://onecommunityada.com/concepts"><img src="imgs/Icon_Learn.png" style="width:80px; height:80px"></a></td>
+				<td><b>Learn:</b> Are you a newcomer in the crypto space and/or Cardano and would like to understand the concepts around Blockchain, Bitcoin, Cardano and 1COMM? <a class="center" href="https://onecommunityada.com/concepts"><br><b>Click here to access the learning section.				</td>
+			</tr>	
+		</table>
+
+            </div>
+        </section>
+
+        <section class="page-section portfolio bg-primary text-white mb-0" id="FAQ">
+            <div class="container">
+              <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Frequent Questions & Answers</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <table class="style-green-bg">
+			<tr>
+				<td><a href="https://onecommunityada.com/faq"><img src="imgs/Icon_FAQ.png" style="width:80px; height:80px"></a></td>
+				<td><b>FAQ:</b> Let us try to help you with your questions!<a class="center" href="https://onecommunityada.com/faq"><br><b><font color="blue">Click here to access the frequent questions and answers section</font>.				</td>
+			</tr>	
+		</table>
+	</div>
+        </section>
+
+
+        <section class="page-section" id="Delegate">
+            <div class="container">
+              <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Delegate</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+		</div>
+                <table class="style-whitebg">
+			<tr>
+				<td><a href="https://onecommunityada.com/delegate"><img src="imgs/Icon_Delegate.png" style="width:80px; height:80px"></a></td>
+				<td><b>Delegate:</b> Delegate your stake to One Community ADA! <br>Let's grow together! :)</font></a> <a class="center" href="https://onecommunityada.com/delegate"><br><font color="blue"><b>Click here to access the guide to delegate your stake to 1COMM!</b></font></a>				</td>
+			</tr>	
+		</table>
+	</div>
+        </section>
+		
+		<!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4"></h4>
+                        <p class="lead mb-0"><br /></p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Keep in touch!</h4>
+                        <!--
+						<a size="col-lg-5 mb-5 mb-lg-2"href="mailto:onecommunityada@gmail.com" target="_top">Send Mail</a>
+						<a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a>
+						-->
+						<a href="mailto:onecommunityada@gmail.com"><img src="imgs/Email_icon.png" style="width:80px; height:80px" title="E-mail" alt="E-mail"></a>
+						<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="https://twitter.com/CommunityAda"><img src="imgs/Twitter_icon.png" style="width:80px; height:80px" title="Twitter" alt="Twitter"></a>
+					</div>
+                    
+
+                    <!-- Footer Decentralization Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4"></h4>
+                        <p class="lead mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © One Community ADA</small></div>
+        </section>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+	    </body>
+</html>
