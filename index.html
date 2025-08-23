@@ -86,7 +86,7 @@ $.each( data.data, function( i, val ) {
 }); 
 		});
 </script>
-
+			
 <style>
 table.style-poolcard {
   border-collapse: collapse;
@@ -163,7 +163,7 @@ td, th {
      </td>
     <td class="poolcard">Pool Cost:</td>
     <td><font size="3">
-    <span id="pool1whmm0hkxunyhxsr6dfjpx2tpvd05qhev820lx9vcmvqa5wjc6nh_tax_fix"></span>ADA + <span id="pool1whmm0hkxunyhxsr6dfjpx2tpvd05qhev820lx9vcmvqa5wjc6nh_tax_ratio"></span>% 
+    <span id="pool1whmm0hkxunyhxsr6dfjpx2tpvd05qhev820lx9vcmvqa5wjc6nh_tax_fix"></span>ADA + <span id="pool1whmm0hkxunyhxsr6dfjpx2tpvd05qhev820lx9vcmvqa5wjc6nh_tax_ratio"data-format="decimal-2"></span>% 
     </font>
     </td>
    </tr>
@@ -750,7 +750,19 @@ $.each( data.data, function( i, val ) {
                     }
                 });
                 </script>
-                
+
+				// Script to have the fee truncated to 2 decimals
+				<script>
+					document.addEventListener("DOMContentLoaded", () => {
+  					const elements = document.querySelectorAll("[data-format='decimal-2']");
+  					elements.forEach(element => {
+    				const value = parseFloat(element.textContent);
+    				if (!isNaN(value)) {
+      				element.textContent = value.toFixed(2);
+    				}
+  					});
+					});
+				</script>
 
 	    </body>
 </html>
