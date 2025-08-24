@@ -99,32 +99,35 @@ table.style-poolcard {
   padding: 8px;
   margin-left: auto; 
   margin-right: auto;
-  border-radius: 8px; /* optional: looks nicer */
+  border-radius: 8px;
+}
+
+/* Make all rows consistent font size */
+table.style-poolcard td,
+table.style-poolcard th {
+  font-size: 1rem;   /* unified text size */
+  padding: 6px;
 }
 
 /* For very small screens (phones) */
 @media (max-width: 600px) {
   table.style-poolcard {
     width: 95%;
-    min-width: unset; /* allow shrinking */
+    min-width: unset;
   }
-  td.poolcard, th.poolcard {
-    font-size: 0.9rem;  /* slightly smaller text */
-  }
-  td, th {
-    font-size: 1rem;   /* scale down general font */
-    padding: 6px;      /* reduce padding for tighter fit */
+  table.style-poolcard td,
+  table.style-poolcard th {
+    font-size: 0.9rem;  /* scale down slightly */
+    padding: 5px;
   }
 }
 
 /* For desktops and larger screens */
 @media (min-width: 601px) {
-  td.poolcard, th.poolcard {
+  table.style-poolcard td,
+  table.style-poolcard th {
     font-size: 1rem;
-  }
-  td, th {
-    font-size: 1.25rem;
-    padding: 8px;
+    padding: 6px;
   }
 }
 
@@ -145,13 +148,6 @@ table.style-greenbg {
   margin-left: auto; 
   margin-right: auto;
   width: 100%;
-}
-td.poolcard, th.poolcard {
-  text-align: left;
-  padding: 4px;
-}
-tr.poolcard {
-  padding: 2px;
 }
 </style>
 
