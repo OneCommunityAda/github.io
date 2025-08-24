@@ -777,16 +777,37 @@ $.each( data.data, function( i, val ) {
                 </script>
 
 				// Script to have the fee truncated to 2 decimals
+				<!-- Place this script at the end of the body or after the table -->
 				<script>
-					document.addEventListener("DOMContentLoaded", () => {
-  					const elements = document.querySelectorAll("[data-format='decimal-2']");
-  					elements.forEach(element => {
-    				const value = parseFloat(element.textContent);
-    				if (!isNaN(value)) {
-      				element.textContent = value.toFixed(2);
-    				}
-  					});
-					});
+				  document.addEventListener("DOMContentLoaded", () => {
+				    // Function to format decimal values
+				    const formatDecimals = () => {
+				      const elements = document.querySelectorAll("[data-format='decimal-2']");
+				      elements.forEach(element => {
+				        const value = parseFloat(element.textContent.trim());
+				        if (!isNaN(value)) {
+				          element.textContent = value.toFixed(2);
+				        }
+				      });
+				    };
+				
+				    // Initial formatting
+				    formatDecimals();
+				
+				    // Optional: Observe changes if values are updated dynamically
+				    const observer = new MutationObserver((mutations) => {
+				      mutations.forEach((mutation) => {
+				        if (mutation.type === "characterData" || mutation.type === "childList") {
+				          formatDecimals();
+				        }
+				      });
+				    });
+				
+				    const targets = document.querySelectorAll("[data-format='decimal-2']");
+				    targets.forEach(target => {
+				      observer.observe(target, { characterData: true, subtree: true, childList: true });
+				    });
+				  });
 				</script>
 
 	    </body>
