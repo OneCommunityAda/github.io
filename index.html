@@ -90,14 +90,44 @@ $.each( data.data, function( i, val ) {
 <style>
 table.style-poolcard {
   border-collapse: collapse;
-  width: 350px;
+  width: 100%;
+  max-width: 600px;   /* Desktop max */
+  min-width: 350px;   /* Mobile min */
   background-color: #212F3D;
   color: #FDFEFE;
   text-align: left;
   padding: 8px;
   margin-left: auto; 
   margin-right: auto;
+  border-radius: 8px; /* optional: looks nicer */
 }
+
+/* For very small screens (phones) */
+@media (max-width: 600px) {
+  table.style-poolcard {
+    width: 95%;
+    min-width: unset; /* allow shrinking */
+  }
+  td.poolcard, th.poolcard {
+    font-size: 0.9rem;  /* slightly smaller text */
+  }
+  td, th {
+    font-size: 1rem;   /* scale down general font */
+    padding: 6px;      /* reduce padding for tighter fit */
+  }
+}
+
+/* For desktops and larger screens */
+@media (min-width: 601px) {
+  td.poolcard, th.poolcard {
+    font-size: 1rem;
+  }
+  td, th {
+    font-size: 1.25rem;
+    padding: 8px;
+  }
+}
+
 table.style-whitebg {
   border-collapse: collapse;
   color: #212F3D;
@@ -105,7 +135,7 @@ table.style-whitebg {
   padding: 4px;
   margin-left: auto; 
   margin-right: auto;
-  width: 100%
+  width: 100%;
 }
 table.style-greenbg {
   border-collapse: collapse;
@@ -114,20 +144,14 @@ table.style-greenbg {
   padding: 4px;
   margin-left: auto; 
   margin-right: auto;
-  width: 100%
+  width: 100%;
 }
 td.poolcard, th.poolcard {
   text-align: left;
   padding: 4px;
-  font-size: 1.0rem;
 }
 tr.poolcard {
   padding: 2px;
-}
-td, th {
-  text-align: left;
-  padding: 8px;
-  font-size: 1.25rem;
 }
 </style>
 
